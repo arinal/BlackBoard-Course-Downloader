@@ -154,10 +154,12 @@ class BlackBoardClient:
         if self.browser:
             cookieJar = get_cookies(self.site, self.browser)
 
-        if self.institute is None or self.institute.b2_url is None:
-            login_endpoint = self.site + "/webapps/Bb-mobile-bb_bb60/"
-        else:
-            login_endpoint = self.institute.b2_url  # ?v=2&f=xml&ver=4.1.2
+        # if self.institute is None or self.institute.b2_url is None:
+        # if self.institute is None:
+        login_endpoint = self.site + "/webapps/Bb-mobile-bb_bb60/"
+        # login_endpoint = self.site
+        # else:
+        #     login_endpoint = self.institute.b2_url  # ?v=2&f=xml&ver=4.1.2
 
         login = self.session.post(login_endpoint + "sslUserLogin", 
             data={'username': self.username, 'password': self.__password}, 
