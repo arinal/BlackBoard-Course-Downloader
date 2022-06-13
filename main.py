@@ -147,10 +147,10 @@ def main(args) -> None:
     :param args: The Parsed Arguments from the CLI, Configuration File and Inputs
     """
 
-    # args.username = "341503"
-    # args.password = "loofs9"
-    # args.site = "https://elite.law.ac.uk"
-    # args.institute = "elite"
+    args.username = "341503"
+    args.password = "loofs9"
+    args.site = "https://elite.law.ac.uk"
+    args.institute = "elite"
     client = BlackBoardClient(username=args.username,
                               password=args.password, site=args.site, thread_count=int(args.num_threads),
                               institute=args.institute, save_location=args.location,
